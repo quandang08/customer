@@ -12,6 +12,8 @@ Retrieve customer information by ID
 
 Centralized exception handling
 
+Check User have exited
+
 Integration with other services via Eureka Discovery
 
 🛠️ Technologies
@@ -24,27 +26,4 @@ Spring Cloud (Eureka Discovery Client, Config Clint)
 MapStruct
 Lombok
 
-📂 Project Structure
-
-src/
-└── main/
-    ├── java/com.amu.customer/
-    │   ├── controller      # REST API endpoints
-    │   ├── dto             # Data Transfer Objects
-    │   ├── entities        # MongoDB entities
-    │   ├── exception       # Custom exceptions
-    │   ├── handler         # Global exception handling
-    │   ├── mapper          # DTO <-> Entity mappers (MapStruct)
-    │   ├── repositories    # MongoDB repositories
-    │   └── service         # Business logic
-    └── resources/
-        └── application.yml # Configuration
-        
-📡 Configuration
-
-spring:
-  config:
-    import: optional:configserver:http://localhost:8888
-  application:
-    name: customer-service
 
